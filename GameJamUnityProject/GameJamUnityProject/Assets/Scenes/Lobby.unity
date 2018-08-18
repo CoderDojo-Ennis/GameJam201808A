@@ -219,7 +219,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &1699444034
 Prefab:
@@ -321,6 +321,48 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f0ea1698f17668418fad363a2d2757d, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1001 &1816113585
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4814961418805136, guid: fed3c9f861d7ef94b8c20a57ad22ef2f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814961418805136, guid: fed3c9f861d7ef94b8c20a57ad22ef2f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814961418805136, guid: fed3c9f861d7ef94b8c20a57ad22ef2f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814961418805136, guid: fed3c9f861d7ef94b8c20a57ad22ef2f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814961418805136, guid: fed3c9f861d7ef94b8c20a57ad22ef2f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814961418805136, guid: fed3c9f861d7ef94b8c20a57ad22ef2f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814961418805136, guid: fed3c9f861d7ef94b8c20a57ad22ef2f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814961418805136, guid: fed3c9f861d7ef94b8c20a57ad22ef2f, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fed3c9f861d7ef94b8c20a57ad22ef2f, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1977335612
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,5 +423,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

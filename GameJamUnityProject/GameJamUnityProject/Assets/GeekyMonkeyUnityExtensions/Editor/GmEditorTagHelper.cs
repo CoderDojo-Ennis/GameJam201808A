@@ -1,5 +1,6 @@
 ﻿using UnityEditor;
 
+/*
 public static class GmTagHelper
 {
     public static void AddTag(string tag)
@@ -25,3 +26,4 @@ public static class GmTagHelper
         }
     }
 }
+*/
