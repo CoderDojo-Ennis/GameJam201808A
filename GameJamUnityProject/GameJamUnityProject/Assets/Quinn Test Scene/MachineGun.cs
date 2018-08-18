@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Networking;
 
-public class MachineGun : NetworkBehaviour
+public class MachineGun : MonoBehaviour
 {
     public Transform Head;
     public float DelayBetweenShots = 0.1f; //in seconds
@@ -17,7 +16,7 @@ public class MachineGun : NetworkBehaviour
 
     void Update ()
     {
-        if (isLocalPlayer)
+        if (GetComponentInParent<CarScript>().isLocalPlayer)
         {
             ShootTimer -= Time.deltaTime;
             Head.LookAt(cam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 100)));
