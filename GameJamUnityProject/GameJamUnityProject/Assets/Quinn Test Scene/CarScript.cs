@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CarScript : MonoBehaviour
 {
+    public string equippedWeapon = "";
+
 	void Update ()
     {
 		if (Input.GetButtonDown("Flip"))
@@ -12,4 +14,13 @@ public class CarScript : MonoBehaviour
             transform.rotation = Quaternion.identity;
         }
 	}
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Pickup"))
+        {
+            equippedWeapon = other.GetComponent<Pickup>().weapon;
+            Destroy(other.gameObject);
+        }
+    }
 }
