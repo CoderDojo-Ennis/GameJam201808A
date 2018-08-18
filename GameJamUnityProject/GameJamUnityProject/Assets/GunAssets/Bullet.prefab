@@ -181,6 +181,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
   gun: {fileID: 0}
-  speed: 2000
+  speed: 3000
   travelTime: 0
-  damage: 0
+  damage: 1
