@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Gun : MonoBehaviour {
-    public Transform cameraDirection;
+    
     public GameObject bullet;
 	// Use this for initialization
 	void Start () {
