@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class Gun : MonoBehaviour {
+public class Gun : NetworkBehaviour {
     
     public GameObject bullet;
 	// Use this for initialization
@@ -12,10 +13,18 @@ public class Gun : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0) && isLocalPlayer)
         {
-            Instantiate(bullet, transform.position, transform.rotation);
-            ;
+            CmdShoot();
         }
+    }
+    [Command]
+    void CmdShoot()
+    {
+        Instantiate(bullet, 
+            transform.position, 
+            transform.rotation);
+
+        NetworkServer.Spawn(bullet);
     }
 }
