@@ -15,7 +15,7 @@ public class Flag : MonoBehaviour
 
 	void OnEnable()
 	{
-		StartCoroutine(ControlFlag());
+		StartCoroutine("ControlFlag");
 	}
 
 	void OnCollisionEnter(Collision coll)
@@ -39,7 +39,7 @@ public class Flag : MonoBehaviour
 	{
 		while (Carried)
 		{
-			gameObject.transform = Car.transform;
+			//gameObject.transform = Car.transform;
 		}
 
 		while (!Carried)
@@ -50,10 +50,10 @@ public class Flag : MonoBehaviour
 
 	IEnumerator RespawnFlag ()
 	{
-		WaitForSeconds(15);
+		yield return new WaitForSeconds(15);
 		if (!Carried && transform != FlagTransform)
 		{
-			transform = FlagTransform;
+			transform.position = FlagTransform.position;
 		}
 	}
 }
