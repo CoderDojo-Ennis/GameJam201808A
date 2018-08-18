@@ -386,6 +386,11 @@ Prefab:
       propertyPath: m_CustomConfig
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114515478270362382, guid: fed3c9f861d7ef94b8c20a57ad22ef2f,
+        type: 2}
+      propertyPath: m_NetworkPort
+      value: 80
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fed3c9f861d7ef94b8c20a57ad22ef2f, type: 2}
   m_IsPrefabAsset: 0
