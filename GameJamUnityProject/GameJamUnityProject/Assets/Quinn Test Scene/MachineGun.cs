@@ -34,7 +34,11 @@ public class MachineGun : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(Head.position, Head.forward, out hit))
         {
-            hit.transform.position = new Vector3(hit.transform.position.x, hit.transform.position.y + 50, hit.transform.position.z);
+            if (hit.transform.GetComponent<Rigidbody>() == null)
+            {
+                hit.transform.gameObject.AddComponent<Rigidbody>();
+            }
+            hit.transform.position = new Vector3(hit.transform.position.x, hit.transform.position.y + 20, hit.transform.position.z);
         }
     }
 }
