@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 114143200145598210}
   - component: {fileID: 114027933044753192}
   - component: {fileID: 114940286498198206}
+  - component: {fileID: 114845899561918716}
   m_Layer: 0
   m_Name: SportsCar
   m_TagString: Untagged
@@ -893,6 +894,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Head: {fileID: 4797104037049330}
   DelayBetweenShots: 0.1
+--- !u!114 &114845899561918716
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1054925288108588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48d8b6044ffc11941961321473c82fda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 1508307129075396, guid: c9035a13df0708e4390ffa0434bcbbfd, type: 2}
 --- !u!114 &114940286498198206
 MonoBehaviour:
   m_ObjectHideFlags: 1
