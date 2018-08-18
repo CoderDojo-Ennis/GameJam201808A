@@ -24,6 +24,7 @@ public class Pickup : MonoBehaviour
 	{
 		RandomWeapon();
 		ChangeTexture();
+		StartCoroutine(Disable());
 	}
 
 	void FixedUpdate ()
@@ -46,5 +47,11 @@ public class Pickup : MonoBehaviour
 				renderer.material = missileLauncherMaterial;
 				break;	
 		}
+	}
+
+	IEnumerator Disable()
+	{
+		yield return new WaitForSeconds(15);
+		Destroy(gameObject);
 	}
 }
