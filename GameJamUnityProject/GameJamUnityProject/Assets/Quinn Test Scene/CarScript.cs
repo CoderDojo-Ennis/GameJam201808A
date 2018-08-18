@@ -20,6 +20,7 @@ public class CarScript : NetworkBehaviour
         foreach(Transform t in GunParent)
         {
             Guns.Add(t.gameObject);
+            t.gameObject.SetActive(false);
         }
     }
 
@@ -53,9 +54,18 @@ public class CarScript : NetworkBehaviour
         if (other.CompareTag("Pickup"))
         {
             string wepName = other.GetComponent<Pickup>().weapon;
-            foreach(GameObject g in Guns) { g.SetActive(false); }
-            equippedWeapon = Guns.Find((g) => g.name == wepName);
-            equippedWeapon.SetActive(true);
+            foreach (GameObject g in Guns)
+            {
+                if (g.name == wepName)
+                {
+                    g.SetActive(true);
+                    equippedWeapon = g;
+                }
+                else
+                {
+                    g.SetActive(false);
+                }
+            }
             /*
             if (equippedWeapon != null)
             {
