@@ -1,12 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class CarScript : MonoBehaviour
+public class CarScript : NetworkBehaviour
 {
-    public string equippedWeapon = "";
+    GameObject equippedWeapon;
+    public Transform WeaponPosition;
+    public Transform CamLookAt;
+    public Transform CamPos;
 
-	void Update ()
+    private void Start()
+    {
+        if (isLocalPlayer)
+        {
+            CameraController c = Camera.main.GetComponent<CameraController>();
+            c.lookAtTarget = CamLookAt;
+            c.positionTarget = CamPos;
+        }
+    }
+
+    void Update ()
     {
 		if (Input.GetButtonDown("Flip"))
         {
@@ -19,7 +33,11 @@ public class CarScript : MonoBehaviour
     {
         if (other.CompareTag("Pickup"))
         {
-            equippedWeapon = other.GetComponent<Pickup>().weapon;
+            if (equippedWeapon != null)
+            {
+                Destroy(equippedWeapon);
+            }
+            equippedWeapon = Instantiate(Resources.Load(other.GetComponent<Pickup>().weapon) as GameObject, WeaponPosition.position, Quaternion.identity, transform);
             Destroy(other.gameObject);
         }
     }
