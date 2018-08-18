@@ -14,7 +14,10 @@ public class CameraController : MonoBehaviour
 
     private void UpdateCamera()
     {
-        transform.position = Vector3.Lerp(transform.position, positionTarget.position, Time.deltaTime * smoothing);
-        transform.LookAt(lookAtTarget);
+        if (lookAtTarget != null && positionTarget != null)
+        {
+            transform.position = Vector3.Lerp(transform.position, positionTarget.position, Time.deltaTime * smoothing);
+            transform.LookAt(lookAtTarget);
+        }
     }
 }
