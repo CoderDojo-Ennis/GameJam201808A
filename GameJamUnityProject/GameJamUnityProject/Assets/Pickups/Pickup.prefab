@@ -97,8 +97,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: 
-  cannonMaterial: {fileID: 15303, guid: 0000000000000000f000000000000000, type: 0}
-  machineGunMaterial: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  cannonMaterial: {fileID: 2100000, guid: 5e1d593d1d8431a4c8f2af84537044b0, type: 2}
+  machineGunMaterial: {fileID: 2100000, guid: 163ad97a8c979df45bddc1de008721ac, type: 2}
   missileLauncherMaterial: {fileID: 10301, guid: 0000000000000000f000000000000000,
     type: 0}
 --- !u!136 &136942443367617374
