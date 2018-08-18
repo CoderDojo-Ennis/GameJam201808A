@@ -12,7 +12,8 @@ public class Fire : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody>();
-        rb.velocity = transform.forward * Time.deltaTime * speed;
+        //rb.velocity += transform.forward * Time.deltaTime * speed;
+        rb.AddForce(transform.forward * Time.deltaTime * speed,ForceMode.Impulse);
         StartCoroutine(TravelTime());
     }
 
@@ -23,10 +24,15 @@ public class Fire : MonoBehaviour {
     }
 	// Update is called once per frame
 	void Update () {
-  
+     
     }
     void OnCollisionEnter(Collision coll)
     {
+        if(coll.gameObject.tag == "city")
+        {
+            Destroy(gameObject);
+        }
+        //if(coll.gameObject.name)
         //Destroy(gameObject);
     }
 }
