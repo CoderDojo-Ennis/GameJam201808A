@@ -26,17 +26,9 @@ public class Pickup : MonoBehaviour
 		ChangeTexture();
 	}
 
-	void Update ()
+	void FixedUpdate ()
 	{
-		transform.Rotate(0, 0, 1);
-	}
-
-	void OnCollisionEnter(Collision col)
-	{
-		if (col.gameObject.tag == "Car")
-		{
-			Destroy(this);
-		}
+		transform.Rotate(0, 0, 2);
 	}
 
 	void ChangeTexture ()
