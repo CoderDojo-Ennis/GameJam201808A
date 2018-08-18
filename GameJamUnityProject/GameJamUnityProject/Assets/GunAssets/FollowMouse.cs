@@ -12,7 +12,7 @@ public class FollowMouse : MonoBehaviour {
     void Start () {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-        Instantiate(gun, transform);
+        //Instantiate(gun, transform);
         //if(Input.GetAxis("Cancel")) 
 	}
 	
