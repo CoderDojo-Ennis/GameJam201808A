@@ -5,7 +5,7 @@ using UnityEngine.Networking;
 
 public class Gun : NetworkBehaviour {
     
-    public GameObject bullet;
+    public GameObject Bullet;
 	// Use this for initialization
 	void Start () {
 
@@ -22,10 +22,10 @@ public class Gun : NetworkBehaviour {
     [Command]
     void CmdShoot()
     {
-        Instantiate(bullet, 
+        GameObject obj = Instantiate(Bullet, 
             transform.position + new Vector3(0,0.5f,0), 
             transform.rotation);
 
-        NetworkServer.Spawn(bullet);
+        NetworkServer.Spawn(obj);
     }
 }
