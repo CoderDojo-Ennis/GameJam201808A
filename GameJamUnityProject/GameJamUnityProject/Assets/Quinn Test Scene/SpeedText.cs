@@ -18,6 +18,6 @@ public class SpeedText : MonoBehaviour
         float carSpeed = car.velocity.magnitude; //in metres per second
         carSpeed /= 1000; //kilometres per second
         carSpeed *= 3600; //kilometres per hour
-        text.text = car.velocity.magnitude.ToString("F0") + " km/h"; //"F0" means round to 0 decimal places
+        text.text = carSpeed.ToString("F0") + " km/h"; //"F0" means round to 0 decimal places
 	}
 }
